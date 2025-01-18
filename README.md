@@ -1,2 +1,2 @@
 # WrathoftheJammed
-RAHHHHHHH I LOVE GUNS
+GUNGEON BUT EPIC
