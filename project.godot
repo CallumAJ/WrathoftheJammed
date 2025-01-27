@@ -51,6 +51,10 @@ shoot={
 2d_render/layer_2="Enemies"
 2d_render/layer_3="Walls"
 2d_render/layer_4="Bullets"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemies"
+2d_physics/layer_3="Walls"
+2d_physics/layer_4="Bullets"
 
 [rendering]
 
