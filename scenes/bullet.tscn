@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmp333x8yjxll"]
+[gd_scene load_steps=3 format=3 uid="uid://dmp333x8yjxll"]
 
-[ext_resource type="Script" path="res://scenes/bullet.gd" id="1_wixga"]
 [ext_resource type="Texture2D" uid="uid://wkt1riw22v5m" path="res://graphics/bullet.png" id="1_xxynt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gbqgq"]
@@ -8,8 +7,7 @@ height = 46.0
 
 [node name="bullet" type="Area2D"]
 collision_layer = 8
-collision_mask = 6
-script = ExtResource("1_wixga")
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xxynt")
