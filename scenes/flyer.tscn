@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://uhq8xx1rngsq"]
+
+[ext_resource type="Texture2D" uid="uid://bryfkslwhnrll" path="res://graphics/flier.png" id="1_p472n"]
+[ext_resource type="Script" path="res://scenes/flyer.gd" id="1_qbl55"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_40ac8"]
+radius = 38.3275
+
+[node name="Flyer" type="Area2D"]
+script = ExtResource("1_qbl55")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.417677, 0.48913)
+texture = ExtResource("1_p472n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 5)
+shape = SubResource("CircleShape2D_40ac8")
