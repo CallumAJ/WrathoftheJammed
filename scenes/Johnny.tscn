@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://noqm3i8boxaj"]
+[gd_scene load_steps=18 format=3 uid="uid://noqm3i8boxaj"]
 
 [ext_resource type="Script" path="res://scenes/johnny.gd" id="1_c46q0"]
 [ext_resource type="Texture2D" uid="uid://bgxbvhdbxiwt5" path="res://graphics/Sprite-0001.png" id="1_g117u"]
@@ -99,13 +99,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fe2a"]
 size = Vector2(60, 60)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qx0ky"]
+size = Vector2(43, 55)
+
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 6
 script = ExtResource("1_c46q0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4pwgr")
-animation = &"walk"
+animation = &"idle"
 speed_scale = 0.8
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
@@ -116,4 +118,14 @@ shape = SubResource("RectangleShape2D_7fe2a")
 [node name="GunBarrel" type="Marker2D" parent="."]
 position = Vector2(14, 21)
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_qx0ky")
+
 [connection signal="bullet" from="." to="." method="_on_bullet"]
+[connection signal="area_entered" from="Area2D" to="." method="spike_Die"]

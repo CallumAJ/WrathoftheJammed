@@ -13,11 +13,12 @@ var fireAngle = 0
 @export var MAX_SPEED := 300
 
 signal bullet(pos)
+signal player_Death
 
 func _ready() -> void:
-	position = Vector2 (640, 640)
+	pass
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	if Input.is_action_just_pressed("shoot"):
 		bullet.emit($GunBarrel.global_position)
 
@@ -115,6 +116,9 @@ func _physics_process(delta: float) -> void:
 		
 	
 
+func _on_bullet(_pos: Variant) -> void:
+	pass # Replace with function body
 
-func _on_bullet(pos: Variant) -> void:
-	pass # Replace with function body.
+func spike_Die(area: Area2D) -> void:
+	player_Death.emit()
+	queue_free()

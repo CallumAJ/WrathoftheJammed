@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5uxoc01px8gp"]
+
+[ext_resource type="Texture2D" uid="uid://bgxbvhdbxiwt5" path="res://graphics/Sprite-0001.png" id="2_c3rm6"]
+[ext_resource type="Texture2D" uid="uid://cpeigfj2d58s7" path="res://icon.svg" id="2_pnus2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ku3tl"]
+size = Vector2(64, 64)
+
+[node name="Spike" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ku3tl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_pnus2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9, -3)
+scale = Vector2(1, 1.125)
+texture = ExtResource("2_c3rm6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-19, 4.63641)
+rotation = 3.14159
+scale = Vector2(1, 1.01989)
+texture = ExtResource("2_c3rm6")
