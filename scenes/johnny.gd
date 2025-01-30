@@ -12,7 +12,7 @@ var airDirection = 1
 var fireAngle = 0
 @export var MAX_SPEED := 300
 
-signal bullet(pos)
+signal bullet(pos, fireAngle)
 
 func _ready() -> void:
 	position = Vector2 (640, 640)

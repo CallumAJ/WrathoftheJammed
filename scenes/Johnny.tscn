@@ -105,7 +105,7 @@ script = ExtResource("1_c46q0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4pwgr")
-animation = &"walk"
+animation = &"jumpspin"
 speed_scale = 0.8
 
 [node name="hitbox" type="CollisionShape2D" parent="."]

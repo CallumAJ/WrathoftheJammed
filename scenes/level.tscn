@@ -61,4 +61,6 @@ collision_mask = 11
 position = Vector2(571.75, 67)
 shape = SubResource("RectangleShape2D_73ffl")
 
+[node name="Bullets" type="Node2D" parent="."]
+
 [connection signal="bullet" from="Player" to="." method="_on_player_bullet"]
